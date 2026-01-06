@@ -14,16 +14,16 @@ jobs:
   get-next-version:
     name: Get next version
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     outputs:
       hasNextVersion: ${{ steps.get-next-version.outputs.hasNextVersion }}
       version: ${{ steps.get-next-version.outputs.version }}
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
-          fetch-depth: "0"
+          fetch-depth: 0
       - name: Get next version
         id: get-next-version
         uses: thenativeweb/get-next-version@2.7.1
@@ -39,9 +39,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v6
       - name: Use Go
         uses: actions/setup-go@v6
         with:
@@ -62,3 +60,4 @@ jobs:
           artifacts: "build/*"
           tag: v${{ needs.get-next-version.outputs.version }}
           generateReleaseNotes: true
+

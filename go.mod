@@ -1,6 +1,6 @@
 module template
 
-go 1.25.0
+go 1.25.4
 
 tool honnef.co/go/tools/cmd/staticcheck
 
