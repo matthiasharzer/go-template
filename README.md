@@ -17,4 +17,5 @@ This is a simple template for developing Go applications. It includes a Makefile
   - [ ] Delete the `ruleset.json` file after importing.
 - [ ] Enable `Allow auto-merge` in the general settings of your GitHub repository.
 - [ ] Enable `Automatically delete head branches` in the general settings of your GitHub repository.
+- [ ] Create the `Dependencies` tag
 
