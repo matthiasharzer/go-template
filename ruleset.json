@@ -3,7 +3,7 @@
   "name": "Main Branch Protection",
   "target": "branch",
   "source_type": "Repository",
-  "source": "MatthiasHarzer/go-template",
+  "source": "matthiasharzer/go-template",
   "enforcement": "active",
   "conditions": {
     "ref_name": {
