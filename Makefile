@@ -1,7 +1,7 @@
 BUILD_VERSION ?= "unknown"
 
-OUTPUT_NAME := "template"
-MODULE_NAME := "github.com/matthiasharzer/$(OUTPUT_NAME)"
+OUTPUT_NAME := template
+MODULE_NAME := $(shell go list -m)
 
 clean:
 	@rm -rf build/
