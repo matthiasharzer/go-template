@@ -1,11 +1,6 @@
 FROM golang:1.26.4-alpine3.23 AS build
 
-ARG version
-
-RUN if [ -z "$version" ]; then \
-			echo "version is not set"; \
-			exit 1; \
-    fi
+ARG version=unknown
 
 RUN apk update && \
 		apk add git
