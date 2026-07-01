@@ -1,7 +1,6 @@
 FROM golang:1.26.4-alpine3.23 AS build
 
 ARG version
-ARG tool_name
 
 RUN if [ -z "$version" ]; then \
 			echo "version is not set"; \
@@ -30,7 +29,5 @@ FROM alpine:3.24
 COPY --from=build /go/bin/<tool-name> /usr/local/bin/<tool-name>
 
 WORKDIR /var/lib/<tool-name>
-
-EXPOSE 8080
 
 ENTRYPOINT ["/usr/local/bin/<tool-name>"]
