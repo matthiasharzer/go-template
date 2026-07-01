@@ -12,6 +12,7 @@ This is a simple template for developing Go applications. It includes a Makefile
 - [ ] Update `<tool-name>` in `main.go` and `cmd/version/command.go` to your desired tool name.
 - [ ] Update the copyright year and name in `LICENSE`.
 - [ ] Update this `README.md` to reflect your project details.
+- [ ] Remove the `docker` dependabot config at `.github/dependabot.yml` if you are not using Docker.
 
 ### GitHub
 - [ ] Import the `ruleset.json` as a branch protection rule in your GitHub repository settings.
