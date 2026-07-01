@@ -10,9 +10,9 @@ updates:
     assignees:
       - matthiasharzer
     labels:
-    - Dependencies
+      - Dependencies
     allow:
-    - dependency-type: direct
+      - dependency-type: direct
     commit-message:
       prefix: chore
     groups:
@@ -33,7 +33,7 @@ updates:
     assignees:
       - matthiasharzer
     labels:
-    - Dependencies
+      - Dependencies
     commit-message:
       prefix: chore
     groups:
