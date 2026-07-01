@@ -19,10 +19,10 @@ RUN go mod download && \
 COPY . .
 
 RUN module_path=$(go list -m) && \
-	go build  \
-	-o /go/bin/<tool-name> \
-	-ldflags "-X ${module_path}/cmd/version.version=$version"  \
-	./main.go
+	go build \
+		-o /go/bin/<tool-name> \
+		-ldflags "-X ${module_path}/cmd/version.version=$version" \
+		.
 
 FROM alpine:3.24
 
