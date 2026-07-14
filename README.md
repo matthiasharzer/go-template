@@ -15,7 +15,7 @@ This is a simple template for developing Go applications. It includes a Makefile
 - [ ] When **NOT** using Docker:
   - [ ] Delete the `Dockerfile`
   - [ ] Remove the `docker` dependabot config at `.github/dependabot.yml`
-  - [ ] Remove the steps after `- name: Set up QEMU` in `.github/workflows/release.yml`
+  - [ ] Remove the steps starting at `- name: Set up QEMU` in `.github/workflows/release.yml`
 - [ ] When using Docker:
   - [ ] Update `<tool-name>` in `Dockerfile` and `.github/workflows/release.yml`
 
