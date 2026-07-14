@@ -9,11 +9,15 @@ This is a simple template for developing Go applications. It includes a Makefile
 ### Files
 - [ ] Update `OUTPUT_NAME` in `Makefile` to your desired binary name.
 - [ ] Update the `module` in `go.mod` to your project's module path.
-- [ ] Update `<tool-name>` in `main.go`, `cmd/version/command.go` and `Dockerfile` (if using Docker) to your desired tool name.
+- [ ] Update `<tool-name>` in `main.go`, `cmd/version/command.go` to your desired tool name.
 - [ ] Update the copyright year and name in `LICENSE`.
 - [ ] Update this `README.md` to reflect your project details.
-- [ ] Remove the `docker` dependabot config at `.github/dependabot.yml` if you are not using Docker.
-- [ ] Delete the `Dockerfile` if you are not using Docker.
+- [ ] When **NOT** using Docker:
+  - [ ] Delete the `Dockerfile`
+  - [ ] Remove the `docker` dependabot config at `.github/dependabot.yml`
+  - [ ] Remove the steps after `- name: Set up QEMU` in `.github/workflows/release.yml`
+- [ ] When using Docker:
+  - [ ] Update `<tool-name>` in `Dockerfile` and `.github/workflows/release.yml`
 
 ### GitHub
 - [ ] Import the `ruleset.json` as a branch protection rule in your GitHub repository settings.
