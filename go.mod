@@ -1,4 +1,4 @@
-module template
+module github.com/username/template
 
 go 1.26.4
 
