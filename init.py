@@ -1,5 +1,7 @@
 import re
 import subprocess
+import datetime
+
 
 def str_prompt(prompt: str, default_value: str = "") -> str:
 	if default_value:
@@ -104,6 +106,9 @@ def main():
 	set_tool_name()
 	set_module_name()
 	set_author()
+
+	current_year = datetime.datetime.now().year
+	replace_template(["LICENSE"], "<year>", str(current_year))
 
 
 
