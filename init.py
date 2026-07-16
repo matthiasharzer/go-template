@@ -11,10 +11,14 @@ def str_prompt(prompt: str, default_value: str = "") -> str:
 
 def replace_template(files: list[str], template_value: str, new_value: str):
 	for file in files:
-		with open(file, "r") as f:
-			content = f.read()
+		try:
+			with open(file, "r", encoding="utf-8") as f:
+				content = f.read()
+		except FileNotFoundError:
+			print(f"Skipping missing file: {file}")
+			continue
 		content = content.replace(template_value, new_value)
-		with open(file, "w") as f:
+		with open(file, "w", encoding="utf-8") as f:
 			f.write(content)
 
 def get_repo_url():
