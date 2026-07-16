@@ -1,6 +1,7 @@
 import re
 import subprocess
 import datetime
+import os
 
 
 def str_prompt(prompt: str, default_value: str = "") -> str:
@@ -116,7 +117,7 @@ def main():
 
 	should_self_destruct = str_prompt("Do you want to delete this script? (y/n)", default_value="y")
 	if should_self_destruct == "y":
-		subprocess.run(["rm", __file__])
+		os.remove(__file__)
 
 
 
