@@ -15,7 +15,8 @@ python init.py
 
 Alternatively, you may manually update the following files:
 - [ ] Update the `module` in `go.mod` to your project's module path.
-- [ ] Update `<tool-name>` in `Makefile`, `main.go`, `cmd/version/command.go` to your desired tool name.
+- [ ] Update `tool-name` in `Makefile` to your desired tool name.
+- [ ] Update `<tool-name>` in `main.go`, `cmd/version/command.go` to your desired tool name.
 - [ ] Update the copyright year and name in `LICENSE`.
 
 #### Content

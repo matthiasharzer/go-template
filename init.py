@@ -37,7 +37,6 @@ def set_tool_name():
 	repo_url = get_repo_url()
 	TEMPLATE_VALUE = "<tool-name>"
 	FILES = [
-		"Makefile",
 		"Dockerfile",
 		".github/workflows/release.yml",
 		"main.go",
@@ -60,6 +59,7 @@ def set_tool_name():
 		print("Invalid tool name. Please use only alphanumeric characters, underscores, or hyphens.")
 
 	replace_template(FILES, TEMPLATE_VALUE, tool_name)
+	replace_template(["Makefile"], "OUTPUT_NAME := tool-name", f"OUTPUT_NAME := {tool_name}")
 
 def set_module_name():
 	repo_url = get_repo_url()
