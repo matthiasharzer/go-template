@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"template/cmd/version"
+	"github.com/username/template/cmd/version"
 
 	"github.com/spf13/cobra"
 )
