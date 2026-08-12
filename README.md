@@ -35,3 +35,5 @@ Alternatively, you may manually update the following files:
 - [ ] Enable `Automatically delete head branches` in the general settings of your GitHub repository.
 - [ ] Create the `Dependencies` tag
 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details
