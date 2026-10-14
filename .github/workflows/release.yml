@@ -46,13 +46,13 @@ jobs:
       - name: Run QA
         run: |
           make qa
+      - name: Build artifacts
+        run: |
+          make build BUILD_VERSION=${{ needs.get-next-version.outputs.version }}
       - name: Create new version
         run: |
           git tag v${{needs.get-next-version.outputs.version}}
           git push origin v${{needs.get-next-version.outputs.version}}
-      - name: Build artifacts
-        run: |
-          make build BUILD_VERSION=${{ needs.get-next-version.outputs.version }}
       - name: Release new version
         uses: ncipollo/release-action@v1
         with:
