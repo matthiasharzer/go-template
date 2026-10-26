@@ -6,6 +6,7 @@ import (
 
 	"github.com/username/template/cmd/version"
 
+	_ "github.com/matthiasharzer/service-kit/logging"
 	"github.com/spf13/cobra"
 )
 
