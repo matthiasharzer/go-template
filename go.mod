@@ -5,7 +5,7 @@ go 1.27.3
 tool honnef.co/go/tools/cmd/staticcheck
 
 require (
-	github.com/matthiasharzer/service-kit v0.1.1
+	github.com/matthiasharzer/service-kit v0.2.0
 	github.com/spf13/cobra v1.10.2
 )
 
